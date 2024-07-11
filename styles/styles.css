@@ -1,0 +1,139 @@
+@import "variables.css";
+
+/*--------------------------------------------------------------
+Normalizing Styles
+--------------------------------------------------------------*/
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    border-radius: var(--border-radius);
+}
+
+/*--------------------------------------------------------------
+Typography
+--------------------------------------------------------------*/
+body, button {
+    font-family: var(--font-family);
+}
+
+h1 {
+    font-size: var(--font-size-default);
+}
+footer {
+    font-size: var(--font-size-small);
+}
+
+#prettifyButton {
+    text-transform: uppercase;
+    letter-spacing: var(--pad-extra-small);
+    text-decoration-style: solid;
+}
+
+/*--------------------------------------------------------------
+Colour
+--------------------------------------------------------------*/
+body {
+    background-color: var(--colour-white);
+    color: var(--colour-default);
+}
+
+.input-area {
+    background-color: var(--colour-extra-light);
+}
+
+#input {
+    background-color: var(--colour-extra-light);
+    color: var(--colour-dark);
+    border: 2px solid var(--colour-light);
+}
+
+#prettifyButton {
+    background-color: var(--colour-light);
+    color: var(--colour-dark);
+
+}
+
+.output-area {
+    background-color: var(--colour-light);
+    border: 2px solid var(--colour-dark);
+}
+
+pre {
+    color: var(--colour-extra-extra-dark);
+}
+
+/*--------------------------------------------------------------
+Layout and Component Styles
+--------------------------------------------------------------*/
+body {
+    max-width: 960px;
+    padding: var(--pad-small) var(--pad-extra-large);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 8vh 80vh 8vh;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--pad-extra-large);
+    justify-content: center;
+}
+
+.input-area {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: var(--pad-extra-large);
+    gap: var(--pad-medium);
+    align-self: start;
+}
+
+#input {
+    height: 10vh;
+    overflow: scroll;
+    padding: var(--pad-small);
+    outline: none;
+}
+
+#prettifyButton {
+    height: 48px;
+    border: none;
+    cursor: pointer;
+}
+
+.output-area {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: var(--pad-medium);
+    overflow: scroll;
+    height: 45vh;
+}
+
+#output {
+    cursor: pointer;
+}
+
+footer {
+    align-self: end;
+}
+
+@media (min-width: 760px) {
+    .main {
+        grid-template-columns: 360px 1fr;
+        gap: var(--pad-small) var(--pad-extra-large);
+        justify-content: center;
+    }
+
+    #input {
+        height: 35vh;
+    }
+
+    .output-area {
+        height: 75vh;
+    }
+}

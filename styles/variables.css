@@ -1,0 +1,31 @@
+.container {
+    --font-family: 'Nunito';
+    --line-height-heading: 1;
+    --line-height-narrow-content: 1.5;
+    --line-height-regular: 2;
+    --line-height-wide-content: 2.5;
+    --font-size-default: 16px;
+    --font-size-small: 10px;
+    --font-size-medium: 14px;
+    --font-size-large: 34px;
+    --font-size-extra-large: 80px;
+    --font-weight-light: 400;
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+    --pad-extra-small: 4px;
+    --pad-small: 8px;
+    --pad-medium: 12px;
+    --pad-large: 16px;
+    --pad-extra-large: 24px;
+    --pad-extra-extra-large: 72px;
+    --shadow-slight: '0 1px 3px hsla(0, 0%, 0%, .2)';
+    --shadow-default: '0 5px 15px hsla(0, 0%, 0%, .2)';
+    --border-radius: 12px;
+    --colour-white: hsl(187, 42%, 95%);
+    --colour-extra-light: hsl(192, 68%, 92%);
+    --colour-light: hsl(192, 68%, 82%);
+    --colour-default: hsl(192, 68%, 78%);
+    --colour-dark: hsl(192, 68%, 48%);
+    --colour-extra-dark: hsl(192, 68%, 28%);
+    --colour-extra-extra-dark: hsl(192, 68%, 18%);
+}

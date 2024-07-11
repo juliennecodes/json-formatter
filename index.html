@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Prettify</title>
+    <link href="./styles/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+</head>
+
+<body id="body" class="container">
+    <header>
+        <h1>JSON Formatter</h1>
+    </header>
+
+    <main class="main">
+        <div id="input-area" class="input-area">
+            <label for="input">
+            </label>
+            <textarea id="input" spellcheck="false"></textarea>
+            <button id="prettifyButton">Prettify</button>
+        </div>
+
+        <div id="output-area" class="output-area">
+            <pre id="output"></pre>
+        </div>
+    </main>
+
+    <footer>Copyright &copy 2024 Julienne</footer>
+</body>
+
+<script src="./scripts/prettify.js">
+</script>
+
+</html>
