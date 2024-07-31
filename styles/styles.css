@@ -93,6 +93,12 @@ body {
     align-self: start;
 }
 
+.buttonAndToggle {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: var(--pad-medium);
+}
+
 #input {
     height: 10vh;
     overflow: scroll;
@@ -101,7 +107,6 @@ body {
 }
 
 #prettifyButton {
-    height: 48px;
     border: none;
     cursor: pointer;
 }
@@ -136,4 +141,51 @@ footer {
     .output-area {
         height: 75vh;
     }
+}
+
+/*--------------------------------------------------------------
+Toggle
+--------------------------------------------------------------*/
+.toggle {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.switch input {
+    display: none;
+}
+
+/* the slider where the circle slides */
+.slider {
+    position: relative;
+    display: inline-block;
+    width: 64px;
+    height: 32px;
+    background-color: var(--colour-default);
+    border-radius: 32px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/* circle inside slider */
+.slider::before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 8px;
+    bottom: 4px;
+    background-color: var(--colour-light);
+    border-radius: 50%;
+    transition: transform 0.2s;
+}
+
+/* change background colour of switch when checked*/
+input:checked + .slider {
+    background-color: var(--colour-dark);
+}
+
+/* moves the circle to the right when checked*/
+input:checked + .slider::before {
+    transform: translateX(24px);
 }
