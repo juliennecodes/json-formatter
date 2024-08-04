@@ -114,13 +114,24 @@ body {
 .output-area {
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
     padding: var(--pad-medium);
     overflow: scroll;
     height: 45vh;
 }
 
-#output {
+pre {
+    outline: none;
+}
+
+.copyContent {
     cursor: pointer;
+    justify-self: end;
+}
+
+#output {
+    align-self: start;
+    height: auto;
 }
 
 footer {

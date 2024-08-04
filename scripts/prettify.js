@@ -16,6 +16,7 @@ const prettifyButton = document.getElementById('prettifyButton');
 const outputElement = document.getElementById('output');
 const toggleKeysElement = document.getElementById('toggleKeys');
 const toggleValuesElement = document.getElementById('toggleValues');
+const copyContentElement = document.querySelector(".copyContent");
 
 let shouldAnonymizeValues = false;
 let shouldAnonymizeKeys = false;
@@ -102,7 +103,7 @@ prettifyButton.addEventListener('click', () => {
     prettify();
 });
 
-outputElement.addEventListener('click', () => {
+copyContentElement.addEventListener('click', () => {
     const content = outputElement.textContent;
     navigator.clipboard.writeText(content).then(() => null);
 })
